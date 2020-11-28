@@ -5,5 +5,7 @@ def convert(number):
     for i in sound_dict.keys():
         if number%i == 0:
             sound_list.append(sound_dict[i])
-    
-    return ''.join(sound_list)
+            
+    if len(sound_list) == 1:
+        return ''.join(sound_list)
+    return ''.join(sound_list[1:])
